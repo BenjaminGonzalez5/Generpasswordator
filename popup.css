@@ -1,0 +1,90 @@
+body {
+	width: 400px;
+	margin: 0;
+	font-family: 'Google Sans',Roboto,Arial,sans-serif;
+}
+
+input, button {
+	border-radius: 10px;
+}
+
+/* Visibilité des onglets */
+.onglets {
+	display: inline-flex;
+	margin-bottom: 10px;
+	width: 100%;
+	text-align: center;
+}
+
+.onglets p {
+	cursor: pointer;
+	width: 50%;
+	margin: 0;
+	padding-bottom: 0.5em;
+	padding-top: 0.5em;
+}
+
+#onglet2 {
+	display: none;
+}
+
+#onglet1Bouton, #onglet2Bouton {
+	border-bottom: 1px solid #ffedcc;
+	background-color: #fff6e5;
+	color: #ffc04c;
+	font-weight: bold;
+}
+
+#onglet1Bouton.focused, #onglet2Bouton.focused {
+	border-bottom: solid 3px #FFA500;
+	color: #FFA500;
+}
+
+button {
+	background-color : #ffc04c;
+	cursor: pointer;
+}
+
+/* Onglet 1 */
+#onglet1 {
+	padding-top : 2em;
+}
+
+#onglet1 h4 {
+	width: 100%;
+	text-align: center;
+}
+
+.flexConteneur {
+	display: inline-flex;
+	margin-left: 10px;
+	margin-bottom: 1em;
+}
+
+#copiePressePapier {
+	margin-left: 10px;
+}
+
+#motDePasseGenere {
+	height: 30px;
+    margin-top: 7px;
+}
+
+progress {
+	border-radius: 0px;
+	width: 100%;
+	float: bottom;
+}
+progress::-webkit-progress-bar {
+	background-color: black;
+	color: red !important;
+}
+
+/* Onglet 2 */
+#onglet2 {
+	padding: 10px;
+}
+
+#onglet2 div{
+	margin-bottom: 10px;
+}

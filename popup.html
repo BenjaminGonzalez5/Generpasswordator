@@ -1,0 +1,68 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="third-party/jquery-ui.css">
+  <link rel="stylesheet" href="third-party/jquery-ui.structure.css">
+  <link rel="stylesheet" href="third-party/jquery-ui.theme.css">
+  <link rel="stylesheet" href="popup.css">
+  <script src="third-party/jquery-1.12.4.js"></script>
+  <script src="third-party/jquery-ui-1.12.1.js"></script>
+</head>
+<body>
+  <div class="onglets">
+    <p id="onglet1Bouton" class="focused">Double authentification</p>
+    <p id="onglet2Bouton">Générer un mot de passe</p>
+  </div>
+  <div class="contenu">
+    <div id="onglet1">
+    	<div class="flexConteneur">
+	      	<input id="motDePasseGenere" placeholder="Votre mot de passe" style="width: 300px; font-size: 2em;" type="password" value="">
+	      	<button type="button" id="copiePressePapier" data-clipboard-target="#textClipBoard" title="Copier dans le presse-papier">
+	      		<img src="copyClipBoard.png" width="30" height="40">
+			</button>
+	  	</div>
+	  	<h4>Réinitialisation dans : <span id="timer"></span></h4>
+      <progress id="progressBar" max="100" value="70"></progress>
+    </div>
+    <div id="onglet2">
+      <div>
+          <input checked type="checkbox" id="majuscules" name="majuscules">
+          <label for="majuscules">Majuscules</label>
+      </div>
+
+      <div>	
+          <input checked type="checkbox" id="chiffres" name="chiffres">
+          <label for="chiffres">Chiffres</label>
+      </div>
+
+      <div>
+          <input checked type="checkbox" id="caracteresSpeciaux" name="caracteresSpeciaux">
+          <label for="caracteresSpeciaux">Caractères spéciaux (@&$!#?)</label>
+      </div>
+
+      <div>
+        <input type="range" min="4" max="60" value="15" class="slider" id="longueur">
+        <label for="longueur">Longueur (min 4) : <span id="longeurValeur"></span></label>
+      </div>
+
+      <div>
+        <input id="result" type="text" placeholder="Mot de passe généré" style="width: 300px;">
+      </div>
+
+      <div>
+        <h4 id="temps" type="text">Le temps estimé avant de découvrir ce mot de passe est de :
+          <ul>
+            <li>
+              <span id="tempsValeur"></span> seconde(s)
+            </li>
+            <li>Soit 
+              <span id="tempsValeurHeures"></span>
+            </li>
+          </ul>
+        </h4>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
