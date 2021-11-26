@@ -1,10 +1,10 @@
 {
   "name": "Generateur mdp",
-  "description": "Ca doit générer un mdp et tester la durée de crackage",
+  "description": "Cette extension vous permet de générer un mot de passe en vue d'une double authentification. Dans le deuxième onglet, il vous est disponible de générer un mot de passe en fonction des options données (présence de majuscules, de chiffres, de caracteres spéciaux ainsi que la longueur de ce mot de passe. Une indication de durée de vie (lors d'une tentative de déhashage classique de ce mot de passe vous sera fournie (en secondes et en années jours heures, minutes, secondes). Ces valeurs restent des estimations selon le site suivant : 'https://www.betterbuys.com/estimating-password-cracking-times/'.",
   "version": "1.1",
   "manifest_version": 3,
   "action": {
-    "default_title": "Mon généramodepassator",
+    "default_title": "Mon générateur de mot de passe",
     "default_icon": "icon.png",
     "default_popup": "popup.html"
   },

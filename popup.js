@@ -1,8 +1,16 @@
 /*************
+* Constantes
+*************/
+const urlPetiteApi = 'https://api.motdepasse.xyz/create/?include_lowercase&';
+const urlGrandeApi = 'https://api.motdepasse.xyz/create/?include_lowercase&include_digits&include_uppercase&include_special_characters&password_length=20&quantity=1';
+const immediatement = "immédiatement";
+const infini = "∞";
+
+/*************
 *  Functions
 *************/
 function genereMDP() {
-  let url = 'https://api.motdepasse.xyz/create/?include_lowercase&'
+  let url = urlPetiteApi;
   if ($('#chiffres').is(':checked')) {
     url += 'include_digits&'
   }
@@ -45,9 +53,9 @@ function calculTemps(motDePasse) {
 
   let tempsCalculeHeures = 0;
   if (tempsCalcule.toString().indexOf("e") != -1) {
-    tempsCalculeHeures = "∞";
+    tempsCalculeHeures = infini;
   } else if (tempsCalcule < 0.1) {
-    tempsCalculeHeures = "immédiatement";
+    tempsCalculeHeures = immediatement;
   } else {
     tempsCalculeHeures = toHHMMSS(parseInt(tempsCalcule.toString().split(".")[0]));
   } 
@@ -109,7 +117,7 @@ function copyTextToClipboard(text) {
 
 function recupererMotDePasse() {
   reinitTimer();
-  let url = 'https://api.motdepasse.xyz/create/?include_lowercase&include_digits&include_uppercase&include_special_characters&password_length=20&quantity=1';
+  let url = urlGrandeApi;
 
   let myRequest = new Request(url);
 
