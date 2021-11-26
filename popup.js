@@ -44,10 +44,9 @@ function calculTemps(motDePasse) {
   tempsCalcule = combinaisons / GFLOPS;
 
   let tempsCalculeHeures = 0;
-  if (tempsCalcule > 99999999999999999) {
+  if (tempsCalcule.toString().indexOf("e") != -1) {
     tempsCalculeHeures = "∞";
-  }
-  if (tempsCalcule < 0.1) {
+  } else if (tempsCalcule < 0.1) {
     tempsCalculeHeures = "immédiatement";
   } else {
     tempsCalculeHeures = toHHMMSS(parseInt(tempsCalcule.toString().split(".")[0]));
